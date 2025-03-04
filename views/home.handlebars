@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+
+    <!-- Mostrar productos -->
+    <ul>
+        {{#each products}}
+            <li>
+                {{this.name}} - ${{this.price}} - Categoría: {{this.category}}
+                <a href="/products/{{this._id}}">Ver detalles</a>
+            </li>
+        {{/each}}
+    </ul>
+
+    <!-- Paginación -->
+    <div>
+        {{#if hasPrevPage}}
+            <a href="/products?page={{prevPage}}&limit={{limit}}">Página anterior</a>
+        {{/if}}
+        Página {{page}} de {{totalPages}}
+        {{#if hasNextPage}}
+            <a href="/products?page={{nextPage}}&limit={{limit}}">Página siguiente</a>
+        {{/if}}
+    </div>
+
+    <!-- Formulario para agregar un nuevo producto -->
+    <h2>Agregar Nuevo Producto</h2>
+    <form action="/products" method="POST">
+        <input type="text" name="name" placeholder="Nombre del producto" required>
+        <input type="number" name="price" placeholder="Precio" required>
+        <input type="text" name="category" placeholder="Categoría" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/realtime.js"></script>
+</body>
+</html>

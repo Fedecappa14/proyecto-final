@@ -1,0 +1,15 @@
+<h1>Productos en Tiempo Real</h1>
+
+<!-- Formulario para agregar un nuevo producto -->
+<form id="addProductForm">
+    <input type="text" id="productName" placeholder="Nombre del producto" required autocomplete="off">
+    <button type="submit">Agregar</button>
+</form>
+
+<!-- Lista de productos que se actualizará en tiempo real -->
+<ul id="productList">
+    <!-- Aquí se agregan los productos dinámicamente -->
+</ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realtime.js"></script> 
