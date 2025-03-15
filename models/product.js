@@ -20,7 +20,7 @@ const productSchema = new mongoose.Schema({
     }
 }, { timestamps: true });  // Esto agrega automáticamente los campos 'createdAt' y 'updatedAt'
 
-// Creamos el modelo a partir del esquema
+
 const Product = mongoose.model('Product', productSchema);
 
 module.exports = Product;

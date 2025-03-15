@@ -1,6 +1,6 @@
 
 const express = require('express');
-const Product = require('../models/product');  // Importa el modelo de Producto
+const Product = require('../models/product');  
 const router = express.Router();
 
 // Ruta GET para obtener productos con filtros, paginación y ordenamiento
@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     const queryConditions = {};
 
     if (query) {
-        queryConditions.name = { $regex: query, $options: 'i' }; // Filtro por nombre (insensible a mayúsculas/minúsculas)
+        queryConditions.name = { $regex: query, $options: 'i' }; // Filtro
     }
 
     try {

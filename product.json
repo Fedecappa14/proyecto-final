@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Producto 1",
+      "price": 100,
+      "category": "Categoria A"
+    },
+    {
+      "name": "Producto 2",
+      "price": 200,
+      "category": "Categoria B"
+    },
+    {
+      "name": "Producto 3",
+      "price": 150,
+      "category": "Categoria A"
+    },
+    {
+      "name": "Producto 4",
+      "price": 250,
+      "category": "Categoria C"
+    },
+    {
+      "name": "Producto 5",
+      "price": 300,
+      "category": "Categoria B"
+    }
+  ]

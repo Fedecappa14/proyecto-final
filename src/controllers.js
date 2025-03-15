@@ -1,4 +1,4 @@
-const Product = require("./models/Product");
+const Product = require("../models/product");
 
 // Crear un producto
 app.post("/api/products", async (req, res) => {
